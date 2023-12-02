@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  resume.amkherad.ir.github.io:
+    container_name: resume.amkherad.ir.github.io
+    image: "$DRONE_REPO_NAME:latest"
+    restart: unless-stopped
+    networks:
+      home_server_net:
+        aliases:
+          - resume.amkherad.ir.github.io
+
+networks:
+  home_server_net:
+    external: true

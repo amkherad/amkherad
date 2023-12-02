@@ -1,0 +1,325 @@
+#
+# Be aware that even a small syntax error here can lead to failures in output.
+#
+
+sidebar:
+    position: right # position of the sidebar : left or right
+    about: True # set to False or comment line if you want to remove the "how to use?" in the sidebar
+    education: True # set to False if you want education in main section instead of in sidebar
+
+    # Profile information
+    name: Ali Kherad
+    tagline: Back-End Developer
+    avatar: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
+
+    # Sidebar links
+    email: alimousavikherad@outlook.com
+    phone: +98 919 489 5618
+    timezone: Asia/Tehran Timezone
+    citizenship:
+    website: amkherad.ir #do not add http://
+    linkedin: amkherad
+    xing: Ali_Kherad
+    github: amkherad
+    telegram: asdf_SHESIB
+    gitlab:
+    bitbucket:
+    twitter: '@amkherad'
+    stack-overflow: 2467152/ali-kherad
+    codewars:
+    goodreads: # Number-Username, e.g. 123456-alandoe
+    pdf: https://amkherad.ir/amkherad/Resume.pdf
+
+    languages:
+      title: Languages
+      info:
+        - idiom: Persian
+          level: Native
+
+        - idiom: English
+          level: Professional
+
+        - idiom: German
+          level: Intermediate
+
+    interests:
+      title: Interests
+      info:
+        - item: Coding
+          link:
+
+        - item: Reading Books
+          link:
+
+        - item: Playing Video and Board Games
+          link:
+
+career-profile:
+    title: Career Profile
+    summary: |
+      I'm a software engineer with 9+ years of working resume. I learned to program when I was 15, and it became my greatest passion ever since.
+      
+      I'm always learning the state of the art technologies and ideas because I believe the more one knows the more one can think outside the box.
+      I have profound knowledge of the web and its distributed nature and on the other hand I'm knowledgeable when it comes to low level stuff such as kernel programming, writing compilers (around 20 compilers/interpreters/transpilers), memory management, critical data-sharing, code optimizations.
+
+      I believe in a well-structured, easy-to-understand code and a user-friendly business logic, so I taught myself to write clean, testable, reusable, and understandable code and I really follow programming principles and well-known patterns to make it easier for others to read my code.
+
+education:
+    title: Education
+    info:
+      - degree: MSc in Computer Software Engineering
+        university: Payame Noor University (Distance Education)
+        time: 2019 – 2021
+        details: |
+          It was mostly online (because of the pandemic), and it was a new educational experience for me.
+          During this time, the books I've read were great, so I learned a lot.
+      - degree: BSc in Computer Programming
+        university: University of Applied Science and Technology (Iran)
+        time: 2016 – 2018
+        details: |
+          It's was a small college, but I had fun studying there and I was so active in classes.
+
+          I've worked on many projects for my courses such as three languages, an interpreter as my final thesis, a compiler to generate AMD64 instructions, and a compiler+vm to compile and execute an intermediate language.
+
+          My final project was on static & dynamic analysis, so I wrote an interpreted language to implement the ideas introduced in my project.
+
+experiences:
+    title: Experiences
+    info:
+      - role: Team Lead
+        time: May 2022 – Dec 2023 (1 yr 8 mos)
+        company: MateMachine, Vancouver
+        details: |
+          MateMachine is an online dating platform with the goal of putting different models of match making together.
+          When I joined the team, they've been working on a monolithic MVP for two years which had crippling bugs and performance issues, after analyzing, I persuade them to gradually transition the software to a microservices architecture without the need for a big bang rewrite, this way we could add tests to the new parts which would assure lesser bugs throughout the development. 
+
+            - Built an identity server to delegate all the work related to identity to an unified service and enabled OAuth features in the app.
+            - Led the team to extract simpler modules in the monolith to stand-alone services while keeping the same interfaces in the monolith.
+            - Mentored the team on testing practices.
+            - Built a sensible versioning for our packages (i.e. Docker, NuGet, Dart) to avoid dependency-hells.
+            - Designed a tool for our pipelines to expose markdowns located at the /docs in all projects on the Confluence and a dedicated documentation website which provided the related swagger endpoint for the APIs which helped the team a lot.
+      - role: Back End Developer
+        time: May 2021 – Sep 2022 (1 yr 5 mos)
+        company: Mores software, Tehran
+        details: |
+          I worked as team lead on a complete & powerful SCM software to handle every aspect of industry-level supply chains. The stack consisted of ASP.net, Vue.js, PostgreSQL, DynamoDB, SQS, Kinesis, CloudWatch with distributed microservices and microfrontends architectures.
+
+            - Taught the team, how to achieve segregation and more generally to follow principles such as SOLID, while maintaining performance. 
+            - Implemented an integration testing framework to utilize Testcontainers and Respawn to allow for transient dependencies while remaining blazing fast.
+            - Designed a framework to allow task control mechanisms like cancellation or retrying on front-end and back-end and enable tracking them in the UI (like JetBrains IDEs).
+      - role: Back End Developer
+        time: Nov 2020 – May 2021 (7 mos)
+        company: Daroopin, Tehran
+        details: |
+          When I got into Daroopin everything was at the MVP stage, so we've done a lot of re-designs and re-implementations to achieve a stable, maintainable codebase that our developers could easily work with.
+
+            - The first thing I did in the company, was to implement an application for pharmacy owners called "Shamim Pharmacy". In the end, the application came out very well-designed so we wanted to have the same architecture for the main website.
+            - After that, I introduced the idea of having a unified identity server so we could both identify and track our users more easily.
+            - The most important thing was to re-implement the main website. We went for "Microservice application" and "Event-Sourced data" architectures.
+      - role: Back End Developer
+        time: Sep 2019 – May 2021 (1 yr 9 mos)
+        company: AratelVC, Tehran
+        details: |
+          I worked as a back-end developer on a game in Aratel, it was my first experience with games and in-game match-making but I really enjoyed it, I used some less-used technologies such as actors and distributed locks.
+
+          Other experiences in this project were:
+            - An in-house advertising system to advertise our other projects such as Daroopin.
+            - A multi-source payment system to buy multiple currencies such as Gems, Coins, Avatars.
+            - Graceful handling of user disconnection and failures in TCP keep-alive handshakes.
+            - User match-making by multiple criteria, such as user's level, tier, win/lose rate.
+            - Multiple granularity locking. It wasn't the first time I've implemented it, but the usage is so rare that I would be excited whenever I get a chance to use it.
+      - role: C#/Java Developer
+        time: Sep 2016 – Sep 2017 (1 yr 1 mo)
+        company: AratelVC, Tehran
+        details: |
+          The company was a subsidiary of TCI (Telecommunication Company of Iran).
+          This experience showed me that I can be as productive in an obsolete and stale environment as in modern environments. Everything was done the old-fashioned way, but I tried my best to at least maintain a modern look for the API layer (which I was in charge of).
+
+          I worked on multiple projects in this company, which were:
+            - An API layer for Stored-Procedure-based functions in SqlServer. which exposed both HTTP and SOAP endpoints for each public Stored-Procedure determined in an admin panel. It took care of the authentication/authorization (both multi-level auth and role-based auth), caching (if requested by the admin panel), aggregation, and so on.
+            - An android application for buying internet packages, bill payment, and many more features.
+            - A dynamic reporting system for other applications in the company.
+      - role: Full Stack Developer
+        time: Jun 2014 – Feb 2016 (1 yr 9 mos)
+        company: Sibe Sabz Pishro Salamat, Tehran
+        details: |
+          My second attempt to start a startup!
+
+          We designed a lot of applications in the company, and I had enough time to play with many libraries and different architectures. I developed a lot in means of technical knowledge and maintainable application.
+      - role: Software Developer
+        time: May 2014 – Jan 2015 (9 mos)
+        company: Arsin Index Computer, Tehran
+        details: |
+          When I was in college (bachelors), My colleagues and I worked on an AI automation system for employees and their cars in college. after a while, we decided to start our own company to sell our software.
+          This was my first attempt to start a startup.
+          Despite the fact that we were financially unsuccessful (and even eventually led to failure), the software was great.
+
+            - It was done in C# on windows.
+            - It was in Kiosk mode, so when you turned the PC on, our company's logo would appear before loading directly into our software, so we even had the on/off (and more) buttons in the software.
+            - Because if the software should crash, nothing was there to help the user, I implemented a watchdog to handle the crashes (with multiple fallback options to make sure the bad configuration wouldn't crash the software over and over again).
+            - The software was highly modular and everything came as a plugin, so the main application was just a window with basics, a canvas in the middle for plugins to render their content, and a great API layer for plugins to use.
+            - The message-bus (we were calling it the Signal Hub, taken from Qt) was amazing.
+            - The software would detect any type of license plate just by adding the right add-on for that kind of plaque.
+            - I implemented a structure for video input to support both analog input (using VLC) and IP/RTSP input (using EmguCV).
+            - We had a lot of physical components (which our hardware designer-made) that the software could communicate with.
+
+          I loved this software a lot, but it failed in the end.
+      - role: Web Developer
+        time: 2008 – 2011 (3 yrs)
+        company: Lifecup
+        details: |
+          The first company that I started to work as an intern.
+          I did and learned a lot in this company.
+
+            - I was in charge of the network configurations (the company had a network guy, but I did all the stuff with his help)
+            - I also did a lot of photoshop retouching in the company which was the first thing I got paid for.
+            - I started to do front-end (I was around 15), first I only did HTML and CSS, but after about a year forward I started to learn JS as well. I designed a lot of websites and made a lot of themes for various CMSes.
+
+          One day I borrowed a book (it was about C++) from the company's bookshelf, and it was my first step into the programming world.
+
+
+# certifications:
+#       title: Certifications
+#       list:
+#         - name: CV Builder
+#           start: 2020
+#           end: 2021
+#           organization: Microsoft
+#           credentialid: 111-222
+#           credentialurl: www.google.com
+#           credentialname: Google
+#           details: |
+#             Details about cert. Lorem ipsum dolor sit amet, consectetur
+#             adipiscing elit.
+#             Nullam eget orci purus. Nullam ultrices neque nibh.
+#             Aenean fermentum, felis vulputate suscipit accumsan,
+#             sem enim bibendum augue, sed convallis arcu lacus at dui.
+#             Pellentesque et nibh suscipit, vestibulum turpis eu, semper tortor.
+#             Praesent felis nibh, eleifend id eleifend id, dictum id enim.
+#             Praesent venenatis erat non augue suscipit consectetur.
+
+#             Second paragraph. Sed eleifend enim ante, vitae efficitur purus
+#             fringilla vel. Ut euismod, sem sed vulputate venenatis,
+#             justo diam viverra velit, sed rhoncus leo leo eu justo.
+#             Suspendisse placerat risus ante, sed porta nisi blandit at.
+#         - name: Git learning
+#           start: 2019
+#           end:
+#           organization: Microsoft
+#           credentialid: 111-222
+#           credentialurl: www.github.com
+#           credentialname: Github
+#           details: |
+#             Older certification. Lorem ipsum dolor sit amet, consectetur
+#             adipiscing elit.
+#             Nullam eget orci purus. Nullam ultrices neque nibh.
+#             Aenean fermentum, felis vulputate suscipit accumsan,
+#             sem enim bibendum augue, sed convallis arcu lacus at dui.
+#             Pellentesque et nibh suscipit, vestibulum turpis eu, semper tortor.
+#             Praesent felis nibh, eleifend id eleifend id, dictum id enim.
+#             Praesent venenatis erat non augue suscipit consectetur.
+
+# projects:
+#     title: Projects
+#     intro: >
+#       You can list your side projects in this
+#       section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+#       Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
+#     assignments:
+#       - title: Velocity
+#         link: "#hook"
+#         tagline: "A responsive website template designed to help startups promote, market and sell their products."
+
+#       - title: DevStudio
+#         link: "#"
+#         tagline: "A responsive website template designed to help web developers/designers market their services."
+
+#       - title: Tempo
+#         link: "#"
+#         tagline: "A responsive website template designed to help startups promote their products or services and to attract users &amp; investors"
+
+#       - title: Atom
+#         link: "#"
+#         tagline: "A comprehensive website template solution for startups/developers to market their mobile apps."
+
+#       - title: Delta
+#         link: "#"
+#         tagline: "A responsive Bootstrap one page theme designed to help app developers promote their mobile apps"
+
+# oss:
+#     title: OSS Contributions
+#     intro: >
+#       You can list your open source software contributions in this
+#       section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+#       Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
+#     contributions:
+#       - title: Tempo
+#         link: "#"
+#         tagline: "A responsive website template designed to help startups promote their products or services and to attract users &amp; investors"
+
+#       - title: Atom
+#         link: "#"
+#         tagline: "A comprehensive website template solution for startups/developers to market their mobile apps."
+
+#       - title: Delta
+#         link: "#"
+#         tagline: "A responsive Bootstrap one page theme designed to help app developers promote their mobile apps"
+
+# publications:
+#     title: Publications
+#     intro: |
+#       You can list your publications in this section. Lorem ipsum dolor sit
+#       amet, consectetur adipiscing elit. Vestibulum et ligula in nunc
+#       bibendum fringilla a eu lectus.
+#     papers:
+#       - title: The Art of Computer Programming
+#         link: "#"
+#         authors: Donald E. Knuth
+#         conference: Addison-Wesley, 1968
+
+#       - title: "Genetic Programming III: Darwinian Invention &amp; Problem Solving"
+#         link: "#"
+#         authors: Koza, J.R., Andre, D., Bennett, F.H., Keane, M.A.
+#         conference: "Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1st edn. (1999)"
+
+#       - title: A syntax directed compiler for Algol 60
+#         link: "#"
+#         authors: Edgar T. Irons
+#         conference: "Comm. ACM 4 (1961), 51–55"
+
+skills:
+    title: Skills &amp; Proficiency
+
+    toolset:
+      - name: .NET & ASP.NET
+        level: 100%
+
+      - name: Entity Framework
+        level: 98%
+
+      - name: JavaScript (TypeScript, NodeJs, ExpressJs, NestJs, React, React Native)
+        level: 95%
+
+      - name: MSSQL Server
+        level: 80%
+
+      - name: Postgresql
+        level: 75%
+
+      - name: Redis
+        level: 80%
+
+      - name: MongoDB
+        level: 70%
+
+      - name: RabbitMQ
+        level: 80%
+
+      - name: Kafka
+        level: 80%
+
+      - name: Azure Service Bus
+        level: 75%
+
+footer: >
+    Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
