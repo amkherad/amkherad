@@ -40,7 +40,10 @@ sidebar:
           level: Professional
 
         - idiom: German
-          level: Intermediate
+          level: Professional
+
+        - idiom: French
+          level: Elementary
 
     interests:
       title: Interests
@@ -87,7 +90,7 @@ experiences:
     title: Experiences
     info:
       - role: Team Lead
-        time: May 2022 – Dec 2023 (1 yr 8 mos)
+        time: May 2022 – Present
         company: MateMachine, Vancouver
         details: |
           MateMachine is an online dating platform with the goal of putting different models of match making together.
@@ -298,7 +301,7 @@ skills:
         level: 98%
 
       - name: JavaScript (TypeScript, NodeJs, ExpressJs, NestJs, React, React Native)
-        level: 95%
+        level: 100%
 
       - name: MSSQL Server
         level: 80%
