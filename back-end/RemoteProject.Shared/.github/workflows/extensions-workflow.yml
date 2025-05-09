@@ -1,0 +1,54 @@
+name: Extensions Workflow
+
+on:
+  push:
+    branches:
+      - master
+      
+env:
+  BUILD_PATH: './publish/${GITHUB_RUN_ID}'
+  BUILD_CONFIG: 'Release'
+  SOLUTION_FILE: 'MateMachine.Extensions.sln'
+  COVERAGE_FLAG: 'XPlat Code Coverage'
+  LOGGER_FLAG: 'junit;LogFilePath=${{ github.workspace }}/junit/junit-test-result.xml;MethodFormat=Class;FailureBodyFormat=Verbose'
+
+jobs:
+  test-build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    
+    - name: Install Azure CLI
+      run: |
+        curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+        az --version
+      
+    - uses: Azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        
+    - uses: Azure/get-keyvault-secrets@v1
+      with: 
+        keyvault: "env-vairable-vault"
+        secrets: 'NUGET-SOURCE,NUGET-API-KEY,PIPELINE-USER,PIPELINE-TOKEN'
+      id: secretValues
+
+    - name: Run Tests
+      run: |
+            dotnet nuget locals all --clear
+            dotnet nuget add source --username ${{ steps.secretValues.outputs.PIPELINE-USER }} --password ${{ steps.secretValues.outputs.PIPELINE-TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/mm-matemachine/index.json"
+            export INTEGRATION_TESTS_USE_PIPELINE_SERVICES=${INTEGRATION_TESTS_USE_PIPELINE_SERVICES}
+            dotnet test $SOLUTION_FILE --configuration $BUILD_CONFIG -r ${{ github.workspace }}/cobertura --collect "$COVERAGE_FLAG" --test-adapter-path:. --logger:"$LOGGER_FLAG" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=cobertura
+
+    - name: Build Dotnet Packages
+      run: |
+            dotnet build $SOLUTION_FILE --configuration Release
+            dotnet pack $SOLUTION_FILE --configuration Release
+
+    - name: Push Dotnet Packages
+      run: |
+            dotnet nuget push **/*.nupkg  --api-key ${{ steps.secretValues.outputs.NUGET-API-KEY }} --source "github" --skip-duplicate

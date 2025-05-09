@@ -1,0 +1,68 @@
+version: '3.5'
+
+services:
+  gitlab-ce.dev:
+    container_name: gitlab-ce.dev
+    image: 'gitlab/gitlab-ce:latest'
+    restart: unless-stopped
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://gitlab-ce.dev'
+    ports:
+      - '18080:80'
+      - '18443:443'
+      - '22:22'
+    volumes:
+      - '$GITLAB_HOME/config:/etc/gitlab'
+      - '$GITLAB_HOME/logs:/var/log/gitlab'
+      - '$GITLAB_HOME/data:/var/opt/gitlab'
+    networks:
+      gitlab:
+        aliases:
+          - gitlab-ce.dev
+
+  gitlab-runner.dev:
+    container_name: gitlab-runner.dev
+    image: gitlab/gitlab-runner:alpine
+    restart: always
+    depends_on:
+      - web
+    environment:
+      - CI_SERVER_URL=gitlab-ce.dev
+      - REGISTRATION_TOKEN=GR1348941UQ2V3Zspf7RCNF7unNu2
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - '$GITLAB_HOME/gitlab-runner:/etc/gitlab-runner'
+    networks:
+      gitlab:
+        aliases:
+          - gitlab-runner.dev
+
+  baget:
+    container_name: remote-project.baget
+    image: loicsharma/baget:latest
+    restart: always
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - Storage__Type=FileSystem
+      - Storage__Path=/var/baget/packages
+      - Database__Type=Sqlite
+      - Database__ConnectionString=Data Source=/var/baget/baget.db
+      - Search__Type=Database
+      - ApiKey=MySecretApi
+      - AllowPackageOverwrites=true
+      - PackageDeletionBehavior=HardDelete
+      - Mirror__Enabled=true
+      - Mirror__PackageSource=https://api.nuget.org/v3/index.json
+    volumes:
+      - ${BAGET_DATA_PATH}:/var/baget
+    ports:
+      - "19555:80"
+    networks:
+      microservices_net:
+        aliases:
+          - remote-project.baget
+
+networks:
+  gitlab:
+    name: gitlab-network

@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteProject.Shared.Abstractions", "src\RemoteProject.Shared.Abstractions\RemoteProject.Shared.Abstractions.csproj", "{15EC910A-E95F-4632-901B-44331298EED4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteProject.Shared.AspNet", "src\RemoteProject.Shared.AspNet\RemoteProject.Shared.AspNet.csproj", "{EDFBDE6F-BAD2-40A4-A146-3B2CA62452D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteProject.Shared.Data.Abstractions", "src\RemoteProject.Shared.Data.Abstractions\RemoteProject.Shared.Data.Abstractions.csproj", "{4970041F-E8BF-4642-B1CC-341F84B8694F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteProject.Shared.Data.EntityFramework", "src\RemoteProject.Shared.Data.EntityFramework\RemoteProject.Shared.Data.EntityFramework.csproj", "{1D87393A-B2EF-4F9C-AB61-01B0F5B607B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteProject.Shared.TestUtils", "src\RemoteProject.Shared.TestUtils\RemoteProject.Shared.TestUtils.csproj", "{76574416-F2E2-4B7F-9326-4D5870D9D321}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5EFFC118-9BB8-48F6-BB13-0AA394DAB9D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteProject.Shared.UnitTests", "tests\RemoteProject.Shared.UnitTests\RemoteProject.Shared.UnitTests.csproj", "{F3160A0A-AB16-4A68-B885-70DE06A3ADE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15EC910A-E95F-4632-901B-44331298EED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15EC910A-E95F-4632-901B-44331298EED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15EC910A-E95F-4632-901B-44331298EED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15EC910A-E95F-4632-901B-44331298EED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDFBDE6F-BAD2-40A4-A146-3B2CA62452D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDFBDE6F-BAD2-40A4-A146-3B2CA62452D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDFBDE6F-BAD2-40A4-A146-3B2CA62452D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDFBDE6F-BAD2-40A4-A146-3B2CA62452D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4970041F-E8BF-4642-B1CC-341F84B8694F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4970041F-E8BF-4642-B1CC-341F84B8694F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4970041F-E8BF-4642-B1CC-341F84B8694F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4970041F-E8BF-4642-B1CC-341F84B8694F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D87393A-B2EF-4F9C-AB61-01B0F5B607B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D87393A-B2EF-4F9C-AB61-01B0F5B607B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D87393A-B2EF-4F9C-AB61-01B0F5B607B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D87393A-B2EF-4F9C-AB61-01B0F5B607B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76574416-F2E2-4B7F-9326-4D5870D9D321}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76574416-F2E2-4B7F-9326-4D5870D9D321}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76574416-F2E2-4B7F-9326-4D5870D9D321}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76574416-F2E2-4B7F-9326-4D5870D9D321}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3160A0A-AB16-4A68-B885-70DE06A3ADE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3160A0A-AB16-4A68-B885-70DE06A3ADE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3160A0A-AB16-4A68-B885-70DE06A3ADE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3160A0A-AB16-4A68-B885-70DE06A3ADE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F3160A0A-AB16-4A68-B885-70DE06A3ADE0} = {5EFFC118-9BB8-48F6-BB13-0AA394DAB9D7}
+	EndGlobalSection
+EndGlobal

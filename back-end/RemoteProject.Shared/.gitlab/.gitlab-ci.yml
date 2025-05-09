@@ -1,0 +1,50 @@
+image: mcr.microsoft.com/dotnet/sdk:6.0
+
+variables:
+  BUILD_PATH: './publish/$CI_PIPELINE_ID'
+  BUILD_CONFIG: 'Release'
+  SOLUTION_FILE: './RemoteProject.Shared.sln'
+  COVERAGE_FLAG: "XPlat Code Coverage"
+  LOGGER_FLAG: "junit;LogFilePath=$CI_PROJECT_DIR/junit/junit-test-result.xml;MethodFormat=Class;FailureBodyFormat=Verbose"
+
+before_script:
+  - dotnet nuget locals all --clear
+  - echo "${NUGET_SOURCE}"
+  - dotnet nuget add source "${NUGET_SOURCE}"
+
+stages:
+  - tests
+  - build-deploy
+
+tests:
+  stage: tests
+  script:
+    - export INTEGRATION_TESTS_USE_PIPELINE_SERVICES=${INTEGRATION_TESTS_USE_PIPELINE_SERVICES}
+    - dotnet test $SOLUTION_FILE --configuration $BUILD_CONFIG -r $CI_PROJECT_DIR/cobertura
+      --collect "$COVERAGE_FLAG" --test-adapter-path:. --logger:"$LOGGER_FLAG"
+      -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=cobertura
+#  artifacts:
+#    paths:
+#      - $CI_PROJECT_DIR/cobertura/*/coverage.cobertura.xml
+#      - $CI_PROJECT_DIR/junit/junit-test-result.xml
+#    reports:
+#      cobertura:
+#        - $CI_PROJECT_DIR/cobertura/*/coverage.cobertura.xml
+#      junit:
+#        - $CI_PROJECT_DIR/junit/junit-test-result.xml
+#    expire_in: 15 days
+#  only:
+#    - master
+#  needs:
+#    - build-sts
+
+build-deploy:
+  stage: build-deploy
+  script:
+    - dotnet build "${SOLUTION_FILE}" --configuration Release
+    - dotnet pack "${SOLUTION_FILE}" --configuration Release
+    - dotnet nuget push **/*.nupkg -s $NUGET_SOURCE --api-key $NUGET_API_KEY --skip-duplicate
+  only:
+    - master
+  needs:
+    - tests
