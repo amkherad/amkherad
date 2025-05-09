@@ -60,10 +60,11 @@ sidebar:
 career-profile:
     title: Career Profile
     summary: |
-      I'm a software engineer with 9+ years of working resume. I learned to program when I was 15, and it became my greatest passion ever since.
+      I'm a software engineer with 9+ years of working resume. 
+      I learned to program when I was 15, and it became my greatest passion ever since.
       
       I'm always learning the state of the art technologies and ideas because I believe the more one knows the more one can think outside the box.
-      I have profound knowledge of the web and its distributed nature and on the other hand I'm knowledgeable when it comes to low level stuff such as kernel programming, writing compilers (around 20 compilers/interpreters/transpilers), memory management, critical data-sharing, code optimizations.
+      I have profound knowledge of the web and its distributed nature and on the other hand I'm knowledgeable when it comes to low level stuff such as kernel programming, writing compilers (around 20 compilers / interpreters / transpilers), memory management, critical data-sharing, code optimizations.
 
       I believe in a well-structured, easy-to-understand code and a user-friendly business logic, so I taught myself to write clean, testable, reusable, and understandable code and I really follow programming principles and well-known patterns to make it easier for others to read my code.
 
