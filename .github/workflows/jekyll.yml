@@ -44,7 +44,7 @@ jobs:
         uses: ferdinandkeller/html-to-pdf-action@v2
         with:
           source-path: "./_site"
-          destination-path: "./_site/Resume.pdf"
+          destination-path: "./output/Resume.pdf"
 
       - name: Restore the config file
         run: |
@@ -56,6 +56,10 @@ jobs:
         with:
           source: ./
           destination: ./_site
+  
+      - name: Move resume file to _site
+        run: |
+          mv "./output/Resume.pdf" "./_site/Resume.pdf"
   
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
