@@ -52,7 +52,7 @@ jobs:
           rm _config.yml
           mv _config.yml.bk _config.yml
 
-      - name: Build with Jekyll for second time
+      - name: Build with Jekyll for the second time
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
@@ -60,7 +60,7 @@ jobs:
   
       - name: Move resume file to _site
         run: |
-          mv "./output/Resume.pdf" "./_site/Resume.pdf"
+          cp "./output/Resume.pdf" "./_site/Resume.pdf"
   
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
