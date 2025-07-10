@@ -33,6 +33,9 @@ jobs:
           source: ./
           destination: ./_site
 
+      - name: Fix broken paths
+        run: |
+          cp -r ./_site /amkherad
       # Run the HTML to PDF converter action
       - name: Generate Resume PDF File
         uses: ferdinandkeller/html-to-pdf-action@v2
