@@ -24,23 +24,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1 # v1.146.0
-        with:
-          ruby-version: '3.1' # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
+
       - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v5
       - name: Build with Jekyll
-        # Outputs to the './_site' directory by default
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-        env:
-          JEKYLL_ENV: production
-      # - name: Generate Resume PDF File
-      #   run: |
-      #     curl --request POST --header "Content-Type: application/json" -o "./_site/Resume.pdf" "http://api.pdflayer.com/api/convert?access_key=${{ secrets.PDFGENERATOR_API_KEY }}&document_url=https%3A%2F%2Famkherad.ir%2Famkherad%2Fprint.html&page_size=A4&margin_top=10&margin_bottom=10&margin_left=&margin_right="
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
 
       # Run the HTML to PDF converter action
       - name: Generate Resume PDF File
@@ -48,19 +39,48 @@ jobs:
         with:
           source-path: "./_site"
           destination-path: "./_site/Resume.pdf"
-
-      # Upload the PDF as an artifact
-      # - name: Upload PDF
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: generated-pdf
-      #     path: ./out.pdf
-
       - name: Upload artifact
-        # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
-        with:
-          path: "./_site"
+
+
+
+      # - name: Setup Ruby
+      #   uses: ruby/setup-ruby@v1 # v1.146.0
+      #   with:
+      #     ruby-version: '3.1' # Not needed with a .ruby-version file
+      #     bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+      #     cache-version: 0 # Increment this number if you need to re-download cached gems
+      # - name: Setup Pages
+      #   id: pages
+      #   uses: actions/configure-pages@v5
+      # - name: Build with Jekyll
+      #   # Outputs to the './_site' directory by default
+      #   run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+      #   env:
+      #     JEKYLL_ENV: production
+      # - name: Generate Resume PDF File
+      #   run: |
+      #     curl --request POST --header "Content-Type: application/json" -o "./_site/Resume.pdf" "http://api.pdflayer.com/api/convert?access_key=${{ secrets.PDFGENERATOR_API_KEY }}&document_url=https%3A%2F%2Famkherad.ir%2Famkherad%2Fprint.html&page_size=A4&margin_top=10&margin_bottom=10&margin_left=&margin_right="
+
+      # # Run the HTML to PDF converter action
+      # - name: Generate Resume PDF File
+      #   uses: ferdinandkeller/html-to-pdf-action@v2
+      #   with:
+      #     source-path: "./_site"
+      #     destination-path: "./_site/Resume.pdf"
+
+      # # Upload the PDF as an artifact
+      # # - name: Upload PDF
+      # #   uses: actions/upload-artifact@v4
+      # #   with:
+      # #     name: generated-pdf
+      # #     path: ./out.pdf
+
+      # - name: Upload artifact
+      #   # Automatically uploads an artifact from the './_site' directory by default
+      #   uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     path: "./_site"
 
   # Deployment job
   deploy:
@@ -72,4 +92,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
