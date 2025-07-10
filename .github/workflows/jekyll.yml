@@ -32,6 +32,7 @@ jobs:
         run: |
           cp _config.yml _config.yml.bk
           sed -i -e 's/baseurl/#/g' _config.yml
+          mkdir output
           
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1

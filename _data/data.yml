@@ -299,7 +299,7 @@ skills:
         level: 100%
 
       - name: Entity Framework
-        level: 98%
+        level: 100%
 
       - name: JavaScript (TypeScript, NodeJs, ExpressJs, NestJs, React, React Native)
         level: 100%
@@ -308,13 +308,13 @@ skills:
         level: 80%
 
       - name: Postgresql
-        level: 75%
-
-      - name: Redis
         level: 80%
 
       - name: MongoDB
-        level: 70%
+        level: 80%
+
+      - name: Redis
+        level: 80%
 
       - name: RabbitMQ
         level: 80%
