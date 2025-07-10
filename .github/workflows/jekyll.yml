@@ -36,11 +36,26 @@ jobs:
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-      - name: Generate Resume PDF File
-        run: |
-          curl --request POST --header "Content-Type: application/json" -o "./_site/Resume.pdf" "http://api.pdflayer.com/api/convert?access_key=${{ secrets.PDFGENERATOR_API_KEY }}&document_url=https%3A%2F%2Famkherad.ir%2Famkherad%2Fprint.html&page_size=A4&margin_top=10&margin_bottom=10&margin_left=&margin_right="
         env:
           JEKYLL_ENV: production
+      # - name: Generate Resume PDF File
+      #   run: |
+      #     curl --request POST --header "Content-Type: application/json" -o "./_site/Resume.pdf" "http://api.pdflayer.com/api/convert?access_key=${{ secrets.PDFGENERATOR_API_KEY }}&document_url=https%3A%2F%2Famkherad.ir%2Famkherad%2Fprint.html&page_size=A4&margin_top=10&margin_bottom=10&margin_left=&margin_right="
+
+      # Run the HTML to PDF converter action
+      - name: Generate Resume PDF File
+        uses: ferdinandkeller/html-to-pdf-action@v2
+        with:
+          source-path: "./_site"
+          destination-path: "./_site/Resume.pdf"
+
+      # Upload the PDF as an artifact
+      # - name: Upload PDF
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: generated-pdf
+      #     path: ./out.pdf
+
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v2
