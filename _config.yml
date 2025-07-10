@@ -18,7 +18,7 @@ repository: amkherad/amkherad.github.io
 logo: /assets/img/avatar.jpg # support internet resources
 #Update all the sections by editing the data.yml file inside _data folder.
 
-baseurl: '/amkherad' 
+baseurl: '/amkherad'
 
 # Style will be applied only after restarting the build or serve. Just choose one of the options.
 theme_skin: blue # blue turquoise green berry orange ceramic
