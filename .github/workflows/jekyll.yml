@@ -34,12 +34,12 @@ jobs:
           source: ./
           destination: ./_site
 
-      - name: Remove baseurl
+      - name: Setup PDF generation
         run: |
           mkdir output
           mkdir webfonts
           cp -R _site/* output
-          cp -R output/assets/plugins/font-awesome/webfonts/* ./webfonts
+          cp -R _site/assets/plugins/font-awesome/webfonts/* ./webfonts
           sed -i 's|/amkherad/||g' output/index.html
           sed -i 's|/amkherad/||g' output/print.html
           cd output
@@ -58,8 +58,9 @@ jobs:
           source-path: "./output"
           destination-path: "./output/Resume.pdf"
 
-      - name: Remove baseurl
+      - name: Restore index file
         run: |
+          cd output
           rm index.html
           mv index.html.bk index.html
       # - name: Restore the config file
