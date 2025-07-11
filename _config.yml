@@ -5,7 +5,7 @@ remote_theme: "sharu725/online-cv"
 rtl: true
 
 # Site Settings
-title: "Ali Mousavi Kherad" # the main title
+title: "Ali Kherad" # the main title
 url: "https://amkherad.ir"
 #change it according to your repository name
 # disabling since we are using a custom domain
@@ -21,8 +21,8 @@ logo: /assets/img/avatar.jpg # support internet resources
 baseurl: '/amkherad'
 
 # Style will be applied only after restarting the build or serve. Just choose one of the options.
-theme_skin: blue # blue turquoise green berry orange ceramic
-chrome_mobile_color: #use hex colors (ex:#1976d2) or leave empty if you don't want a color for chrome mobile searchbar
+theme_skin: ceramic # blue turquoise green berry orange ceramic
+# chrome_mobile_color: #use hex colors (ex:#1976d2) or leave empty if you don't want a color for chrome mobile searchbar
 
 # Tracker
 analytics: UA-176003281-1

@@ -17,7 +17,7 @@ sidebar:
     phone: +98 919 489 5618
     timezone: Asia/Tehran Timezone
     citizenship:
-    website: amkherad.ir #do not add http://
+    website: https://amkherad.ir #do not add http://
     linkedin: amkherad
     xing: Ali_Kherad
     github: amkherad
@@ -98,6 +98,11 @@ education:
 experiences:
     title: Experiences
     info:
+      - role: Team Lead
+        time: May 2022 – Present
+        company: MateMachine, Vancouver
+        details: |
+          sdf
       - role: Team Lead
         time: May 2022 – Present
         company: MateMachine, Vancouver

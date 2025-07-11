@@ -38,7 +38,6 @@ jobs:
         run: |
           sed -i 's|/amkherad/||g' index.html
           sed -i 's|/amkherad/||g' print.html
-          sed -i 's|/amkherad/||g' compress.html
           mkdir output
 
         # cp _config.yml _config.yml.bk
