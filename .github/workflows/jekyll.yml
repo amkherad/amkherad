@@ -40,8 +40,8 @@ jobs:
           mkdir output/webfonts
           cp -R _site/* output
           cp -R _site/assets/plugins/font-awesome/webfonts/* output/webfonts
-          sed -i 's|"/amkherad/|"|g' output/index.html
-          sed -i 's|"/amkherad/|"|g' output/print.html
+          sed -i 's|\"/amkherad/|\"|g' output/index.html
+          sed -i 's|\"/amkherad/|\"|g' output/print.html
           sed -i 's|../webfonts|webfonts|g' output/index.html
           sed -i 's|../webfonts|webfonts|g' output/print.html
           cd output
