@@ -51,7 +51,6 @@ jobs:
         run: |
           rm _config.yml
           mv _config.yml.bk _config.yml
-          rm -r ./_site
 
       - name: Build with Jekyll for the second time
         uses: actions/jekyll-build-pages@v1
