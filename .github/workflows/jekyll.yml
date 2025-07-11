@@ -61,7 +61,7 @@ jobs:
       - name: Move resume file to _site
         run: |
           chmod 777 "./_site
-          cp "./output/Resume.pdf" "./_site/"
+          cp "./output/Resume.pdf" "./_site/Resume.pdf"
   
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
