@@ -48,6 +48,9 @@ sidebar:
     interests:
       title: Interests
       info:
+        - item: Managing the team
+          link:
+
         - item: Creating software
           link:
 
