@@ -37,13 +37,15 @@ jobs:
       - name: Remove baseurl
         run: |
           mkdir output
+          mkdir webfonts
           cp -R _site/* output
+          cp -R assets/plugins/font-awesome/webfonts/* ./webfonts
           sed -i 's|/amkherad/||g' output/index.html
           sed -i 's|/amkherad/||g' output/print.html
           cd output
           ../scripts/inline-html.sh index.html index.inline.html
           ../scripts/inline-html.sh print.html print.inline.html
-          rm index.html
+          mv index.html index.html.bk
           mv print.inline.html index.html
 
         # cp _config.yml _config.yml.bk
@@ -56,6 +58,10 @@ jobs:
           source-path: "./output"
           destination-path: "./output/Resume.pdf"
 
+      - name: Remove baseurl
+        run: |
+          rm index.html
+          mv index.html.bk index.html
       # - name: Restore the config file
       #   run: |
       #     rm _config.yml
