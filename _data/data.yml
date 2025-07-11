@@ -48,13 +48,10 @@ sidebar:
     interests:
       title: Interests
       info:
-        - item: Coding
+        - item: Creating software
           link:
 
-        - item: Reading Books
-          link:
-
-        - item: Playing Video and Board Games
+        - item: Working on IoT projects
           link:
 
 career-profile:
@@ -68,6 +65,18 @@ career-profile:
 
       I believe in a well-structured, easy-to-understand code and a user-friendly business logic, so I taught myself to write clean, testable, reusable, and understandable code and I really follow programming principles and well-known patterns to make it easier for others to read my code.
 
+      My Skills:
+      [✓] ASP.NET (ASP.NET MVC, ASP.NET Core)
+      [✓] JavaScript/TypeScript (NodeJs, React, React Native, Angular)
+      [✓] ORM (Entity Framework, Dapper)
+      [✓] SQL (MSSQL Server, Postgresql, SQLite)
+      [✓] NoSql (Redis, MongoDB, DynamoDB)
+      [✓] OOP, AOP, SOLID, Clean Code, Design Patterns
+      [✓] GraphQL, Grpc, HTTP/REST, RabbitMQ, DBUS
+      [✓] CI/CD, Docker, Kubernetes, Git
+      [✓] GitHub, GitLab, Jira, Redmine
+      [✓] AWS, Azure
+      [✓] Agile
 education:
     title: Education
     info:
@@ -86,19 +95,6 @@ education:
           I've worked on many projects for my courses such as three languages, an interpreter as my final thesis, a compiler to generate AMD64 instructions, and a compiler+vm to compile and execute an intermediate language.
 
           My final project was on static & dynamic analysis, so I wrote an interpreted language to implement the ideas introduced in my project.
-
-          My Skills:
-          [✓] ASP.NET (ASP.NET MVC, ASP.NET Core)
-          [✓] JavaScript/TypeScript (NodeJs, React, React Native, Angular)
-          [✓] ORM (Entity Framework, Dapper)
-          [✓] SQL (MSSQL Server, Postgresql, SQLite)
-          [✓] NoSql (Redis, MongoDB, DynamoDB)
-          [✓] OOP, AOP, SOLID, Clean Code, Design Patterns
-          [✓] GraphQL, Grpc, HTTP/REST, RabbitMQ, DBUS
-          [✓] CI/CD, Docker, Kubernetes, Git
-          [✓] GitHub, GitLab, Jira, Redmine
-          [✓] AWS, Azure
-          [✓] Agile
 experiences:
     title: Experiences
     info:

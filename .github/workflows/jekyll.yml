@@ -28,18 +28,22 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Remove baseurl
-        run: |
-          cp _config.yml _config.yml.bk
-          sed -i -e 's/baseurl/#/g' _config.yml
-          mkdir output
-          
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
 
+      - name: Remove baseurl
+        run: |
+          sed -i 's|/amkherad/||g' index.html
+          sed -i 's|/amkherad/||g' print.html
+          sed -i 's|/amkherad/||g' compress.html
+          mkdir output
+
+        # cp _config.yml _config.yml.bk
+        # sed -i -e 's/baseurl/#/g' _config.yml
+          
       # Run the HTML to PDF converter action
       - name: Generate Resume PDF File
         uses: ferdinandkeller/html-to-pdf-action@v2
@@ -47,10 +51,10 @@ jobs:
           source-path: "./_site"
           destination-path: "./output/Resume.pdf"
 
-      - name: Restore the config file
-        run: |
-          rm _config.yml
-          mv _config.yml.bk _config.yml
+      # - name: Restore the config file
+      #   run: |
+      #     rm _config.yml
+      #     mv _config.yml.bk _config.yml
 
       - name: Build with Jekyll for the second time
         uses: actions/jekyll-build-pages@v1
