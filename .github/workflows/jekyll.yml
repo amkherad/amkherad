@@ -60,10 +60,12 @@ jobs:
   
       - name: Move resume file to _site
         run: |
-          cp "./output/Resume.pdf" "./_site/Resume.pdf"
+          cp -R _data/* _site
   
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: output/
 
       # - name: Setup Ruby
       #   uses: ruby/setup-ruby@v1 # v1.146.0
