@@ -60,7 +60,7 @@ sidebar:
 career-profile:
     title: Career Profile
     summary: |
-      I'm a software engineer with 9+ years of working resume. 
+      I'm a software engineer with 10+ years of working resume. 
       I learned to program when I was 15, and it became my greatest passion ever since.
       
       I'm always learning the state of the art technologies and ideas because I believe the more one knows the more one can think outside the box.
@@ -87,6 +87,18 @@ education:
 
           My final project was on static & dynamic analysis, so I wrote an interpreted language to implement the ideas introduced in my project.
 
+          My Skills:
+          [✓] ASP.NET (ASP.NET MVC, ASP.NET Core)
+          [✓] JavaScript/TypeScript (NodeJs, React, React Native, Angular)
+          [✓] ORM (Entity Framework, Dapper)
+          [✓] SQL (MSSQL Server, Postgresql, SQLite)
+          [✓] NoSql (Redis, MongoDB, DynamoDB)
+          [✓] OOP, AOP, SOLID, Clean Code, Design Patterns
+          [✓] GraphQL, Grpc, HTTP/REST, RabbitMQ, DBUS
+          [✓] CI/CD, Docker, Kubernetes, Git
+          [✓] GitHub, GitLab, Jira, Redmine
+          [✓] AWS, Azure
+          [✓] Agile
 experiences:
     title: Experiences
     info:
