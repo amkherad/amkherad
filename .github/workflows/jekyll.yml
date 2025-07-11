@@ -40,6 +40,9 @@ jobs:
           cp -R _site/* output
           sed -i 's|/amkherad/||g' output/index.html
           sed -i 's|/amkherad/||g' output/print.html
+          cd output
+          ../scripts/inline-html.sh index.html index.inline.html
+          ../scripts/inline-html.sh print.html print.inline.html
 
         # cp _config.yml _config.yml.bk
         # sed -i -e 's/baseurl/#/g' _config.yml
@@ -48,7 +51,7 @@ jobs:
       - name: Generate Resume PDF File
         uses: ferdinandkeller/html-to-pdf-action@v2
         with:
-          source-path: "./output/print.html"
+          source-path: "./output/print.inline.html"
           destination-path: "./output/Resume.pdf"
 
       # - name: Restore the config file

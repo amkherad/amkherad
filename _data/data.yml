@@ -103,12 +103,12 @@ experiences:
     info:
       - role: Team Lead
         time: May 2022 – Present
-        company: MateMachine, Vancouver
+        company: TopTec, Iran
         details: |
-          sdf
+          TopTec is a software company that is developing softwares that are being used by other companies in the same holding (e.g. Modiran Khodro)
       - role: Team Lead
         time: May 2022 – Present
-        company: MateMachine, Vancouver
+        company: MateMachine, Vancouver (Remote)
         details: |
           MateMachine is an online dating platform with the goal of putting different models of match making together.
           When I joined the team, they've been working on a monolithic MVP for two years which had crippling bugs and performance issues, after analyzing, I persuade them to gradually transition the software to a microservices architecture without the need for a big bang rewrite, this way we could add tests to the new parts which would assure lesser bugs throughout the development. 
@@ -150,7 +150,7 @@ experiences:
             - Multiple granularity locking. It wasn't the first time I've implemented it, but the usage is so rare that I would be excited whenever I get a chance to use it.
       - role: C#/Java Developer
         time: Sep 2016 – Sep 2017 (1 yr 1 mo)
-        company: AratelVC, Tehran
+        company: Behineh Pardazesh, Tehran
         details: |
           The company was a subsidiary of TCI (Telecommunication Company of Iran).
           This experience showed me that I can be as productive in an obsolete and stale environment as in modern environments. Everything was done the old-fashioned way, but I tried my best to at least maintain a modern look for the API layer (which I was in charge of).
