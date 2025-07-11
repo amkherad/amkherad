@@ -36,8 +36,8 @@ jobs:
 
       - name: Remove baseurl
         run: |
-          sed -i 's|/amkherad/||g' index.html
-          sed -i 's|/amkherad/||g' print.html
+          sed -i 's|/amkherad/||g' _site/index.html
+          sed -i 's|/amkherad/||g' _site/print.html
           mkdir output
 
         # cp _config.yml _config.yml.bk
