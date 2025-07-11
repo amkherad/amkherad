@@ -5,7 +5,7 @@
 sidebar:
     position: right # position of the sidebar : left or right
     about: True # set to False or comment line if you want to remove the "how to use?" in the sidebar
-    education: True # set to False if you want education in main section instead of in sidebar
+    education: False # set to False if you want education in main section instead of in sidebar
 
     # Profile information
     name: Ali Kherad
@@ -13,9 +13,9 @@ sidebar:
     avatar: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
-    email: alimousavikherad@outlook.com
+    email: alimousavikherad@gmail.com
     phone: +98 919 489 5618
-    timezone: Asia/Tehran Timezone
+    timezone: Asia/Tehran
     citizenship:
     website: https://amkherad.ir #do not add http://
     linkedin: amkherad
@@ -65,18 +65,18 @@ career-profile:
 
       I believe in a well-structured, easy-to-understand code and a user-friendly business logic, so I taught myself to write clean, testable, reusable, and understandable code and I really follow programming principles and well-known patterns to make it easier for others to read my code.
 
-      My Skills:
-      [✓] ASP.NET (ASP.NET MVC, ASP.NET Core)
-      [✓] JavaScript/TypeScript (NodeJs, React, React Native, Angular)
-      [✓] ORM (Entity Framework, Dapper)
-      [✓] SQL (MSSQL Server, Postgresql, SQLite)
-      [✓] NoSql (Redis, MongoDB, DynamoDB)
-      [✓] OOP, AOP, SOLID, Clean Code, Design Patterns
-      [✓] GraphQL, Grpc, HTTP/REST, RabbitMQ, DBUS
-      [✓] CI/CD, Docker, Kubernetes, Git
-      [✓] GitHub, GitLab, Jira, Redmine
-      [✓] AWS, Azure
-      [✓] Agile
+      My Skills:  
+      [✓] ASP.NET (ASP.NET MVC, ASP.NET Core)  
+      [✓] JavaScript/TypeScript (NodeJs, React, React Native, Angular)  
+      [✓] ORM (Entity Framework, Dapper)  
+      [✓] SQL (MSSQL Server, Postgresql, SQLite)  
+      [✓] NoSql (Redis, MongoDB, DynamoDB)  
+      [✓] OOP, AOP, SOLID, Clean Code, Design Patterns  
+      [✓] GraphQL, Grpc, HTTP/REST, RabbitMQ, DBUS  
+      [✓] CI/CD, Docker, Kubernetes, Git  
+      [✓] GitHub, GitLab, Jira, Redmine  
+      [✓] AWS, Azure  
+      [✓] Agile  
 education:
     title: Education
     info:

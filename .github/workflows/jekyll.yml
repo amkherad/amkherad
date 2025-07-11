@@ -47,7 +47,7 @@ jobs:
       - name: Generate Resume PDF File
         uses: ferdinandkeller/html-to-pdf-action@v2
         with:
-          source-path: "./_site"
+          source-path: "./_site/print.html"
           destination-path: "./output/Resume.pdf"
 
       # - name: Restore the config file
@@ -55,20 +55,20 @@ jobs:
       #     rm _config.yml
       #     mv _config.yml.bk _config.yml
 
-      - name: Build with Jekyll for the second time
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
+      # - name: Build with Jekyll for the second time
+      #   uses: actions/jekyll-build-pages@v1
+      #   with:
+      #     source: ./
+      #     destination: ./_site
   
-      - name: Move resume file to _site
-        run: |
-          cp -R _site/* output
+      # - name: Move resume file to _site
+      #   run: |
+      #     cp -R _site/* output
   
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: output/
+          path: _site/
 
       # - name: Setup Ruby
       #   uses: ruby/setup-ruby@v1 # v1.146.0
