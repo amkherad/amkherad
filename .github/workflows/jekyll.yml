@@ -59,32 +59,34 @@ jobs:
         uses: ferdinandkeller/html-to-pdf-action@v2
         with:
           source-path: "./output"
-          destination-path: "./output/Resume.pdf"
+          destination-path: "./output/AliKherad-Resume.pdf"
 
-      - name: Restore index file
-        run: |
-          cd output
-          rm index.html
-          mv index.html.bk index.html
+      # - name: Restore index file
+      #   run: |
+      #     cd output
+      #     rm index.html
+      #     mv index.html.bk index.html
       # - name: Restore the config file
       #   run: |
       #     rm _config.yml
       #     mv _config.yml.bk _config.yml
 
-      # - name: Build with Jekyll for the second time
-      #   uses: actions/jekyll-build-pages@v1
-      #   with:
-      #     source: ./
-      #     destination: ./_site
+      - name: Build with Jekyll for the second time
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
   
-      # - name: Move resume file to _site
-      #   run: |
-      #     cp -R _site/* output
+      - name: Move resume file to _site
+        run: |
+          mkdir dist
+          cp -R _site/* dist
+          cp "./output/AliKherad-Resume.pdf" "./dist/AliKherad-Resume.pdf" 
   
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: output/
+          path: dist/
 
       # - name: Setup Ruby
       #   uses: ruby/setup-ruby@v1 # v1.146.0
