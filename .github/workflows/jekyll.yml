@@ -47,7 +47,7 @@ jobs:
           cd output
           ../scripts/inline-html.sh index.html index.inline.html
           ../scripts/inline-html.sh print.html print.inline.html
-          sed -i 's|14px|15px|g' output/print.inline.html
+          sed -i 's|14px|15px|g' print.inline.html
           mv index.html index.html.bk
           mv print.inline.html index.html
 
