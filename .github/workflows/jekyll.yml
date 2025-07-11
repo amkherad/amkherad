@@ -39,7 +39,7 @@ jobs:
           mkdir output
           mkdir webfonts
           cp -R _site/* output
-          cp -R assets/plugins/font-awesome/webfonts/* ./webfonts
+          cp -R output/assets/plugins/font-awesome/webfonts/* ./webfonts
           sed -i 's|/amkherad/||g' output/index.html
           sed -i 's|/amkherad/||g' output/print.html
           cd output
