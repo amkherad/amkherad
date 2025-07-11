@@ -60,7 +60,7 @@ jobs:
   
       - name: Move resume file to _site
         run: |
-          cp -R _data/* _site
+          cp -R _site/* output
   
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
