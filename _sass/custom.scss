@@ -13,8 +13,12 @@ li, p {
         page-break-before: always; /* fallback for older browsers */
         margin-top: 60px;
     }
+
+    .main-wrapper .time {
+        padding: 0;
+    }
 }
 
-.main-wrapper .upper-row, .main-wrapper .second-upper-row {
-    padding: 0;
+.main-wrapper .time {
+    padding: 0 !important;
 }
