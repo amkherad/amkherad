@@ -7,6 +7,9 @@ li, p {
     margin-right: 40px;
 }
 
-.page-break {
-        page-break-before: right;
+@media print {
+    .page-break {
+        page-break-before: always;
+        margin-top: 30px;
+    }
 }
