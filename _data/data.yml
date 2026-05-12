@@ -70,17 +70,17 @@ career-profile:
 
       My Skills:  
       [✓] ASP.NET (ASP.NET MVC, ASP.NET Core)  
-      [✓] JavaScript/TypeScript (NodeJs, React, React Native, Angular)  
+      [✓] JavaScript/TypeScript (Express, NestJS, React, React Native)  
       [✓] Python (FastAPI, Django)  
       [✓] ORM (Entity Framework, Dapper, Sequelize, SQLAlchemy)  
-      [✓] SQL (MSSQL Server, Postgresql, SQLite)  
+      [✓] SQL (PostgreSQL, MSSQL Server, SQLite)  
       [✓] NoSql (Redis, MongoDB, DynamoDB)  
       [✓] OOP, AOP, SOLID, Clean Code, Design Patterns  
       [✓] GraphQL, Grpc, HTTP/REST, RabbitMQ, DBUS  
       [✓] CI/CD, Docker, Kubernetes, Git  
       [✓] GitHub, GitLab, Jira, Redmine  
       [✓] AWS, Azure  
-      [✓] Agile  
+      [✓] Agile, Scrum  
 education:
     title: Education
     info:
