@@ -71,7 +71,8 @@ career-profile:
       My Skills:  
       [✓] ASP.NET (ASP.NET MVC, ASP.NET Core)  
       [✓] JavaScript/TypeScript (NodeJs, React, React Native, Angular)  
-      [✓] ORM (Entity Framework, Dapper)  
+      [✓] Python (FastAPI, Django)  
+      [✓] ORM (Entity Framework, Dapper, Sequelize, SQLAlchemy)  
       [✓] SQL (MSSQL Server, Postgresql, SQLite)  
       [✓] NoSql (Redis, MongoDB, DynamoDB)  
       [✓] OOP, AOP, SOLID, Clean Code, Design Patterns  
