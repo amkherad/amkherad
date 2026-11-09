@@ -105,6 +105,15 @@ experiences:
             - Developed the organization's financial (accounting) system, compatible with major accounting systems including SAP, and designed it to handle millions of accounting documents and articles without degrading.
             - Coached team members on both technical topics and AI-ready development.
             - Improved pipelines to run integration and unit tests, improving the quality of service.
+            - Built the identity server (STS) on OpenIddict with authorization code, client credentials and refresh-token flows, plus custom LDAP and token-exchange grants.
+            - Implemented LDAP sign-in as a custom grant that binds as the user's directory entry and uses the directory objectGUID as the subject.
+            - Added federation to external OpenID Connect identity providers, enabled by configuration.
+            - Built a message-sender service with a persisted outbox, batched background dispatch and retries, delivering through in-app real-time streams, SMS and Telegram, with Liquid templates.
+            - Generated one-time codes with a cryptographically secure random generator and a five-minute expiry.
+            - Built an object storage service on S3/MinIO with presigned download URLs and S3 Object Lock retention (governance mode, indefinite or timed).
+            - Validated uploads by file signature (magic bytes) against the declared content type, with a tracked upload pipeline (uploading, uploaded, failed).
+            - Made accounting-document ingestion idempotent: a SHA-256 deduplication key over source system, source key and company, enforced by a unique filtered index in SQL Server.
+            - Moved large Excel reports to an asynchronous request queue and added server-side pagination for general-ledger reports.
       - role: Software Architect, then CTO
         time: May 2022 – 2024 (2 yr)
         company: MateMachine, Vancouver (Hybrid)
