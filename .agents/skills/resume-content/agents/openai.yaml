@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resume Content"
+  short_description: "Edit resume data and README"
+  default_prompt: "Use $resume-content to tighten the MateMachine bullets in _data/data.yml."

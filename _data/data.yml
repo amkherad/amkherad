@@ -102,12 +102,18 @@ education:
 experiences:
     title: Experiences
     info:
-      - role: Team Lead
+      - role: Software Architect and Tech Lead
         time: May 2022 – Present
         company: TopTec, Iran
         details: |
-          TopTec is a software company that is developing softwares that are being used by other companies in the same holding (e.g. Modiran Khodro)
-      - role: Team Lead
+          TopTec is a software company, a sister company of ModiranKhodro, that develops software used by other companies in the same holding
+
+            - Developed an identity server using OpenIddict that supports OAuth, OpenID Connect and federated identity servers, connected to the organization's LDAP and Kerberos for unified logins.
+            - Migrated the legacy token structure to modern encrypted JWTs carrying enough data to support federation, ABAC and other requirements.
+            - Developed the organization's financial (accounting) system, compatible with major accounting systems including SAP, and designed it to handle millions of accounting documents and articles without degrading.
+            - Coached team members on both technical topics and AI-ready development.
+            - Improved pipelines to run integration and unit tests, improving the quality of service.
+      - role: Software Architect, then CTO
         time: May 2022 – Present
         company: MateMachine, Vancouver (Remote)
         details: |
@@ -116,9 +122,16 @@ experiences:
 
             - Built an identity server to delegate all the work related to identity to an unified service and enabled OAuth features in the app.
             - Led the team to extract simpler modules in the monolith to stand-alone services while keeping the same interfaces in the monolith.
-            - Mentored the team on testing practices.
+            - Managed the engineering team and designed the infrastructure and platform.
+            - Migrated services from Azure to on-premise infrastructure at Hetzner to cut costs.
+            - Moved the front-end to edge static hosting on Cloudflare.
             - Built a sensible versioning for our packages (i.e. Docker, NuGet, Dart) to avoid dependency-hells.
             - Designed a tool for our pipelines to expose markdowns located at the /docs in all projects on the Confluence and a dedicated documentation website which provided the related swagger endpoint for the APIs which helped the team a lot.
+            - Built an advanced testing framework that runs integration and end-to-end tests in pipelines, and taught the team to write tests.
+            - Secured the project with multiple techniques and ran security reviews with external experts and AI.
+            - Improved the CI/CD pipelines and SDLC.
+            - Coached the team on hard and soft skills.
+            - Documented the project.
       - role: Back End Developer
         time: May 2021 – Sep 2022 (1 yr 5 mos)
         company: Mores software, Tehran

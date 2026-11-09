@@ -95,7 +95,7 @@ I specialize in building **scalable backend systems**, leading engineering teams
 <div align="center">
 
 <img src="https://github-readme-stats.vercel.app/api?username=amkherad&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" height="165" alt="GitHub stats" />
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=amkherad&theme=tokyonight&hide_border=true" height="165" alt="GitHub streak" />
+<img src="https://streak-stats.demolab.com/?user=amkherad&theme=tokyonight&hide_border=true" height="165" alt="GitHub streak" />
 
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=amkherad&theme=tokyonight&hide_border=true&layout=compact&langs_count=8" height="165" alt="Top languages" />
 

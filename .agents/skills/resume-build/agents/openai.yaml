@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resume Build"
+  short_description: "Build, preview, and publish the resume"
+  default_prompt: "Use $resume-build to check why the PDF deploy dropped the skills section."
