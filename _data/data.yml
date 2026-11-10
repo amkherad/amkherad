@@ -21,7 +21,7 @@ sidebar:
     linkedin: amkherad
     xing: Ali_Kherad
     github: amkherad
-    telegram: asdf_SHESIB
+    telegram: amkherad
     gitlab:
     bitbucket:
     twitter: '@amkherad'
@@ -68,19 +68,17 @@ career-profile:
 
       I believe in a well-structured, easy-to-understand code and a user-friendly business logic, so I taught myself to write clean, testable, reusable, and understandable code and I really follow programming principles and well-known patterns to make it easier for others to read my code.
 
-      My Skills:  
-      [✓] ASP.NET (ASP.NET MVC, ASP.NET Core)  
-      [✓] JavaScript/TypeScript (Express, NestJS, React, React Native)  
-      [✓] Python (FastAPI, Django)  
-      [✓] ORM (Entity Framework, Dapper, Sequelize, SQLAlchemy)  
-      [✓] SQL (PostgreSQL, MSSQL Server, SQLite)  
-      [✓] NoSql (Redis, MongoDB, DynamoDB)  
-      [✓] OOP, AOP, SOLID, Clean Code, Design Patterns  
-      [✓] GraphQL, Grpc, HTTP/REST, RabbitMQ, DBUS  
-      [✓] CI/CD, Docker, Kubernetes, Git  
-      [✓] GitHub, GitLab, Jira, Redmine  
-      [✓] AWS, Azure  
-      [✓] Agile, Scrum  
+      Technical Skills  
+      - Languages: C#, JavaScript, TypeScript, Python, SQL  
+      - Backend: ASP.NET, Express, NestJS, FastAPI, Django  
+      - Frontend & Mobile: React, React Native, VueJS  
+      - Databases: PostgreSQL, MSSQL, SQLite, Redis, MongoDB, DynamoDB  
+      - Data Access: Entity Framework, Dapper, Sequelize, TypeORM, SQLAlchemy  
+      - Architecture: Microservices, DDD, OOP, SOLID, AOP, Design Patterns, Clean Architecture  
+      - Communication: REST, GraphQL, gRPC, RabbitMQ, D-Bus  
+      - Infrastructure: Docker, Kubernetes, CI/CD, AWS, Azure  
+      - Tools: Git, GitHub, GitLab, Jira, Redmine  
+      - Methodologies: Agile, Scrum  
 education:
     title: Education
     info:
@@ -103,7 +101,7 @@ experiences:
     title: Experiences
     info:
       - role: Software Architect and Tech Lead
-        time: May 2022 – Present
+        time: May 2024 – 2026 (2 yr)
         company: TopTec, Iran
         details: |
           TopTec is a software company, a sister company of ModiranKhodro, that develops software used by other companies in the same holding
@@ -114,8 +112,8 @@ experiences:
             - Coached team members on both technical topics and AI-ready development.
             - Improved pipelines to run integration and unit tests, improving the quality of service.
       - role: Software Architect, then CTO
-        time: May 2022 – Present
-        company: MateMachine, Vancouver (Remote)
+        time: May 2022 – 2024 (2 yr)
+        company: MateMachine, Vancouver (Hybrid)
         details: |
           MateMachine is an online dating platform with the goal of putting different models of match making together.
           When I joined the team, they've been working on a monolithic MVP for two years which had crippling bugs and performance issues, after analyzing, I persuade them to gradually transition the software to a microservices architecture without the need for a big bang rewrite, this way we could add tests to the new parts which would assure lesser bugs throughout the development. 
