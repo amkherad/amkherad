@@ -21,6 +21,25 @@ li, p {
     .sidebar-wrapper .container-block {
         padding: 20px;
     }
+
+    /* Repeating thead spacer gives every printed page a top gap in the main column only */
+    .print-top-gap {
+        height: 40px;
+    }
+}
+
+.print-flow {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.print-flow > thead {
+    display: table-header-group;
+}
+
+.print-flow > tbody > tr > td {
+    padding: 0;
 }
 
 .main-wrapper .time {
