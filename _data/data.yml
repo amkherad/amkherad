@@ -291,21 +291,5 @@ experiences:
 #         authors: Edgar T. Irons
 #         conference: "Comm. ACM 4 (1961), 51–55"
 
-skills:
-    title: Skills &amp; Proficiency
-
-    toolset:
-      - name: .NET, ASP.NET & Entity Framework
-        level: 100%
-
-      - name: JavaScript (TypeScript, Node.js, Express.js, NestJS, React, React Native)
-        level: 100%
-
-      - name: Databases (MSSQL, PostgreSQL, MongoDB, Redis)
-        level: 80%
-
-      - name: Messaging (RabbitMQ, Kafka, Azure Service Bus)
-        level: 80%
-
 footer: >
     Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
