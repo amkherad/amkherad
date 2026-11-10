@@ -8,6 +8,19 @@ li, p {
 }
 
 @media print {
+    /* Match the Puppeteer PDF: zero margins and printed backgrounds (the sidebar is white text on a coloured background) */
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    *,
+    *::before,
+    *::after {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
     .page-break {
         break-before: page;
         page-break-before: always; /* fallback for older browsers */
