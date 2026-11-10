@@ -76,8 +76,6 @@ career-profile:
       - Architecture: Microservices, Domain-driven Design, Cell-based Architecture, SOLID, Design Patterns, Clean Architecture  
       - Communication: REST, GraphQL, gRPC, RabbitMQ, D-Bus  
       - Infrastructure: Docker, Kubernetes, CI/CD, AWS, Azure  
-      - Tools: Git, GitHub, GitLab, Jira, Redmine  
-      - Methodologies: Agile, Scrum
 education:
     title: Education
     info:
@@ -98,79 +96,67 @@ experiences:
         time: May 2024 – 2026 (2 yr)
         company: TopTec, Iran
         details: |
-          TopTec is a software company, a sister company of ModiranKhodro, that develops software used by other companies in the same holding
+          TopTec is a ModiranKhodro sister company that builds software for its holding.
 
-            - Developed an identity server using OpenIddict that supports OAuth, OpenID Connect and federated identity servers, connected to the organization's LDAP and Kerberos for unified logins.
-            - Migrated the legacy token structure to modern encrypted JWTs carrying enough data to support federation, ABAC and other requirements.
-            - Developed the organization's financial (accounting) system, compatible with major accounting systems including SAP, and designed it to handle millions of accounting documents and articles without degrading.
-            - Coached team members on both technical topics and AI-ready development.
-            - Improved pipelines to run integration and unit tests, improving the quality of service.
-            - Built the identity server (STS) on OpenIddict with authorization code, client credentials and refresh-token flows, plus custom LDAP and token-exchange grants.
-            - Implemented LDAP sign-in as a custom grant that binds as the user's directory entry and uses the directory objectGUID as the subject.
-            - Added federation to external OpenID Connect identity providers, enabled by configuration.
-            - Built a message-sender service with a persisted outbox, batched background dispatch and retries, delivering through in-app real-time streams, SMS and Telegram, with Liquid templates.
-            - Generated one-time codes with a cryptographically secure random generator and a five-minute expiry.
-            - Built an object storage service on S3/MinIO with presigned download URLs and S3 Object Lock retention (governance mode, indefinite or timed).
-            - Validated uploads by file signature (magic bytes) against the declared content type, with a tracked upload pipeline (uploading, uploaded, failed).
-            - Made accounting-document ingestion idempotent: a SHA-256 deduplication key over source system, source key and company, enforced by a unique filtered index in SQL Server.
-            - Moved large Excel reports to an asynchronous request queue and added server-side pagination for general-ledger reports.
+            - Built an identity server on OpenIddict with OAuth, OpenID Connect, LDAP and Kerberos sign-in, and federation to external identity providers.
+            - Migrated the legacy token structure to encrypted JWTs carrying the claims needed for federation and ABAC.
+            - Developed the organization's accounting system, compatible with SAP and other major systems, designed for millions of documents.
+            - Made accounting-document ingestion idempotent with a SHA-256 deduplication key and a unique filtered index in SQL Server.
+            - Built an S3/MinIO object storage service with presigned URLs and Object Lock retention, validating uploads by file signature.
+            - Built a message-sender service with a persisted outbox and retries, delivering via in-app streams, SMS and Telegram.
+            - Moved large Excel reports to an asynchronous queue and added server-side pagination for general-ledger reports.
+            - Coached team members on AI-ready development.
       - role: Software Architect, then CTO
         time: May 2022 – 2024 (2 yr)
         company: MateMachine, Vancouver (Hybrid)
         details: |
-          MateMachine is an online dating platform with the goal of putting different models of match making together.
-          When I joined, the team had a monolithic MVP with significant bugs and performance issues. I led a gradual transition to microservices without a big-bang rewrite, adding tests to the new parts from the start.
+          MateMachine is an online dating platform. When I joined, the team had a monolithic MVP with significant bugs and performance issues, so I led a gradual move to microservices without a big-bang rewrite.
 
-            - Built an identity server to delegate all the work related to identity to an unified service and enabled OAuth features in the app.
-            - Led the team to extract simpler modules in the monolith to stand-alone services while keeping the same interfaces in the monolith.
+            - Built an identity server to centralize identity and enable OAuth in the app.
+            - Extracted modules from the monolith into stand-alone services behind the same interfaces.
             - Managed the engineering team and designed the infrastructure and platform.
-            - Migrated services from Azure to on-premise infrastructure at Hetzner to cut costs.
-            - Moved the front-end to edge static hosting on Cloudflare.
-            - Built a sensible versioning for our packages (i.e. Docker, NuGet, Dart) to avoid dependency-hells.
-            - Built a pipeline tool that publishes project /docs markdown to Confluence and a documentation site linking Swagger endpoints.
-            - Built an advanced testing framework that runs integration and end-to-end tests in pipelines, and taught the team to write tests.
+            - Migrated services from Azure to on-premise Hetzner servers to cut costs, and moved the front-end to Cloudflare edge hosting.
+            - Built versioning for Docker, NuGet and Dart packages to avoid dependency hell.
+            - Built a pipeline that publishes project docs to Confluence and a documentation site linking Swagger endpoints.
             - Secured the project with multiple techniques and ran security reviews with external experts and AI.
             - Improved the CI/CD pipelines and SDLC.
       - role: Back End Developer
         time: May 2021 – Sep 2022 (1 yr 5 mos)
         company: Mores software, Tehran
         details: |
-          I worked as team lead on an SCM software to handle every aspect of industry-level supply chains. The stack consisted of ASP.NET, Vue.js, PostgreSQL, DynamoDB, SQS, Kinesis, CloudWatch with distributed microservices and microfrontends architectures.
+          I was team lead on an SCM system for industry-level supply chains, built as distributed microservices with microfrontends. Stack: ASP.NET, Vue.js, PostgreSQL, DynamoDB, SQS, Kinesis and CloudWatch.
 
-            - Taught the team, how to achieve segregation and more generally to follow principles such as SOLID, while maintaining performance.
-            - Implemented an integration testing framework to utilize Testcontainers and Respawn to allow for transient dependencies while remaining blazing fast.
-            - Designed a framework to allow task control mechanisms like cancellation or retrying on front-end and back-end and enable tracking them in the UI (like JetBrains IDEs).
+            - Taught the team segregation and SOLID principles while maintaining performance.
+            - Built an integration testing framework with Testcontainers and Respawn, keeping tests isolated and fast.
+            - Designed a cancellation and retry framework for front-end and back-end tasks, with tracking in the UI.
       - role: Back End Developer
         time: Nov 2020 – May 2021 (7 mos)
         company: Daroopin, Tehran
         details: |
-          When I got into Daroopin everything was at the MVP stage, so we've done a lot of re-designs and re-implementations to achieve a stable, maintainable codebase.
+          When I joined, everything was at MVP stage, so we re-designed and re-implemented the code for stability and maintainability.
 
-            - The first thing I did in the company, was to implement an application for pharmacy owners called "Shamim Pharmacy". In the end, the application came out very well-designed so we wanted to have the same architecture for the main website.
-            - After that, I introduced the idea of having a unified identity server so we could both identify and track our users more easily.
-            - The most important thing was to re-implement the main website. We went for "Microservice application" and "Event-Sourced data" architectures.
+            - Built "Shamim Pharmacy", an app for pharmacy owners, and then used its architecture for the main website.
+            - Introduced the idea of a unified identity server to identify and track users.
+            - Re-implemented the main website on microservice and event-sourced architectures.
       - role: Back End Developer
         time: Sep 2019 – May 2021 (1 yr 9 mos)
         company: AratelVC, Tehran
         details: |
-          I worked as a back-end developer on a game at Aratel, including in-game match-making and using actors and distributed locks.
+          I was a back-end developer on a game, working on in-game match-making, actors and distributed locks.
 
-          Other experiences in this project were:
-            - An in-house advertising system to advertise our other projects such as Daroopin.
-            - A multi-source payment system to buy multiple currencies such as Gems, Coins, Avatars.
+            - Match-making by level, tier and win/lose rate.
+            - An in-house advertising system to promote other projects such as Daroopin.
+            - A multi-source payment system for Gems, Coins and Avatars.
             - Graceful handling of user disconnection and failures in TCP keep-alive handshakes.
-            - User match-making by multiple criteria, such as user's level, tier, win/lose rate.
             - Multiple-granularity locking.
       - role: C#/Java Developer
         time: Sep 2016 – Sep 2017 (1 yr 1 mo)
         company: Behineh Pardazesh, Tehran
         details: |
-          The company was a subsidiary of TCI (Telecommunication Company of Iran).
-          Everything was done the old-fashioned way; I maintained a modern design for the API layer I was in charge of.
+          A subsidiary of TCI (Telecommunication Company of Iran). Most work was done the old-fashioned way; I kept a modern design for the API layer I owned.
 
-          I worked on multiple projects in this company, which were:
-            - An API layer for Stored-Procedure-based functions in MSSQL. which exposed both HTTP and SOAP endpoints for each public Stored-Procedure determined in an admin panel. It took care of the authentication/authorization (both multi-level auth and role-based auth), caching (if requested by the admin panel), aggregation, and so on.
-            - An android application for buying internet packages, bill payment, and many more features.
+            - An API layer exposing MSSQL stored procedures over HTTP and SOAP, with multi-level and role-based auth, caching and aggregation.
+            - An Android app for buying internet packages, paying bills and more.
             - A dynamic reporting system for other applications in the company.
       - role: Full Stack Developer
         time: Jun 2014 – Feb 2016 (1 yr 9 mos)
@@ -183,20 +169,18 @@ experiences:
         details: |
           During my BSc, my colleagues and I built an AI automation system for employees and their cars, then founded a company to sell it.
 
-            - It was done in C# on windows.
-            - Because if the software should crash, nothing was there to help the user, I implemented a watchdog to handle the crashes (with multiple fallback options to make sure the bad configuration wouldn't crash the software over and over again).
-            - The software was highly modular and everything came as a plugin, so the main application was just a window with basics, a canvas in the middle for plugins to render their content, and a great API layer for plugins to use.
-            - Implemented a message bus (Signal Hub, inspired by Qt).
-            - The software would detect any type of license plate just by adding the right add-on for that kind of plaque.
-            - I implemented a structure for video input to support both analog input (using VLC) and IP/RTSP input (using EmguCV).
-            - We had a lot of physical components (which our hardware designer-made) that the software could communicate with.
+            - Written in C# for Windows as a plugin-based app, with a message bus (Signal Hub, inspired by Qt) and a plugin API.
+            - A watchdog that recovers from crashes, with fallback options so a bad configuration cannot crash the software repeatedly.
+            - License-plate recognition for any plate type, added through add-ons.
+            - Video input for analog (VLC) and IP/RTSP (EmguCV) sources.
+            - Communication with in-house hardware components.
       - role: Web Developer
         time: 2008 – 2011 (3 yrs)
         company: Lifecup
         details: |
-            - I was in charge of the network configurations (the company had a network guy, but I did all the stuff with his help)
-            - I also did a lot of photoshop retouching.
-            - I started to do front-end (I was around 15), first I only did HTML and CSS, but after about a year forward I started to learn JS as well. I designed a lot of websites and made a lot of themes for various CMSes.
+            - Managed the network configuration, with help from the company's network engineer.
+            - Did a lot of Photoshop retouching.
+            - Started front-end work around age 15 with HTML and CSS, then JavaScript, designing websites and CMS themes.
 
 # certifications:
 #       title: Certifications
@@ -311,35 +295,17 @@ skills:
     title: Skills &amp; Proficiency
 
     toolset:
-      - name: .NET & ASP.NET
-        level: 100%
-
-      - name: Entity Framework
+      - name: .NET, ASP.NET & Entity Framework
         level: 100%
 
       - name: JavaScript (TypeScript, Node.js, Express.js, NestJS, React, React Native)
         level: 100%
 
-      - name: MSSQL
+      - name: Databases (MSSQL, PostgreSQL, MongoDB, Redis)
         level: 80%
 
-      - name: PostgreSQL
+      - name: Messaging (RabbitMQ, Kafka, Azure Service Bus)
         level: 80%
-
-      - name: MongoDB
-        level: 80%
-
-      - name: Redis
-        level: 80%
-
-      - name: RabbitMQ
-        level: 80%
-
-      - name: Kafka
-        level: 80%
-
-      - name: Azure Service Bus
-        level: 75%
 
 footer: >
     Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
