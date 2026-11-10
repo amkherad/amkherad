@@ -70,8 +70,8 @@ career-profile:
 
       Technical Skills  
       - Languages: C#, JavaScript, TypeScript, Python, SQL  
-      - Backend: ASP.NET, Express, NestJS, FastAPI, Django  
-      - Frontend & Mobile: React, React Native, VueJS  
+      - Backend: ASP.NET, Express.js, NestJS, FastAPI, Django  
+      - Frontend & Mobile: React, React Native, Vue.js  
       - Databases: PostgreSQL, MSSQL, SQLite, Redis, MongoDB, DynamoDB  
       - Data Access: Entity Framework, Dapper, Sequelize, TypeORM, SQLAlchemy  
       - Architecture: Microservices, Domain-driven Design, Cell-based Architecture, SOLID, Design Patterns, Clean Architecture  
@@ -134,7 +134,7 @@ experiences:
         time: May 2021 – Sep 2022 (1 yr 5 mos)
         company: Mores software, Tehran
         details: |
-          I worked as team lead on a complete & powerful SCM software to handle every aspect of industry-level supply chains. The stack consisted of ASP.net, Vue.js, PostgreSQL, DynamoDB, SQS, Kinesis, CloudWatch with distributed microservices and microfrontends architectures.
+          I worked as team lead on a complete & powerful SCM software to handle every aspect of industry-level supply chains. The stack consisted of ASP.NET, Vue.js, PostgreSQL, DynamoDB, SQS, Kinesis, CloudWatch with distributed microservices and microfrontends architectures.
 
             - Taught the team, how to achieve segregation and more generally to follow principles such as SOLID, while maintaining performance. 
             - Implemented an integration testing framework to utilize Testcontainers and Respawn to allow for transient dependencies while remaining blazing fast.
@@ -168,7 +168,7 @@ experiences:
           This experience showed me that I can be as productive in an obsolete and stale environment as in modern environments. Everything was done the old-fashioned way, but I tried my best to at least maintain a modern look for the API layer (which I was in charge of).
 
           I worked on multiple projects in this company, which were:
-            - An API layer for Stored-Procedure-based functions in SqlServer. which exposed both HTTP and SOAP endpoints for each public Stored-Procedure determined in an admin panel. It took care of the authentication/authorization (both multi-level auth and role-based auth), caching (if requested by the admin panel), aggregation, and so on.
+            - An API layer for Stored-Procedure-based functions in MSSQL. which exposed both HTTP and SOAP endpoints for each public Stored-Procedure determined in an admin panel. It took care of the authentication/authorization (both multi-level auth and role-based auth), caching (if requested by the admin panel), aggregation, and so on.
             - An android application for buying internet packages, bill payment, and many more features.
             - A dynamic reporting system for other applications in the company.
       - role: Full Stack Developer
@@ -329,13 +329,13 @@ skills:
       - name: Entity Framework
         level: 100%
 
-      - name: JavaScript (TypeScript, NodeJs, ExpressJs, NestJs, React, React Native)
+      - name: JavaScript (TypeScript, Node.js, Express.js, NestJS, React, React Native)
         level: 100%
 
-      - name: MSSQL Server
+      - name: MSSQL
         level: 80%
 
-      - name: Postgresql
+      - name: PostgreSQL
         level: 80%
 
       - name: MongoDB
