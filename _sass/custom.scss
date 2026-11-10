@@ -26,26 +26,6 @@ li, p {
     .print-top-gap {
         height: 40px;
     }
-
-    /* The sidebar background is a grid item, so it stops where the content stops on the last page.
-       A fixed pseudo-element repeats on every printed page and paints the full-height sidebar column. */
-    .wrapper,
-    .sidebar-wrapper {
-        background: none;
-    }
-
-    .wrapper::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        width: 30%;
-        background: $theme-color;
-        z-index: -1;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
 }
 
 .print-flow {
