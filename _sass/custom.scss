@@ -30,3 +30,9 @@ li, p {
 .print-button, .pdf-button {
     visibility: hidden;
 }
+
+.experiences-section .item,
+.non-breakable {
+    break-inside: avoid;
+    page-break-inside: avoid; /* Legacy WebKit compatibility */
+}

@@ -74,7 +74,7 @@ career-profile:
       - Frontend & Mobile: React, React Native, VueJS  
       - Databases: PostgreSQL, MSSQL, SQLite, Redis, MongoDB, DynamoDB  
       - Data Access: Entity Framework, Dapper, Sequelize, TypeORM, SQLAlchemy  
-      - Architecture: Microservices, DDD, OOP, SOLID, AOP, Design Patterns, Clean Architecture  
+      - Architecture: Microservices, Domain-driven Design, Cell-based Architecture, SOLID, Design Patterns, Clean Architecture  
       - Communication: REST, GraphQL, gRPC, RabbitMQ, D-Bus  
       - Infrastructure: Docker, Kubernetes, CI/CD, AWS, Azure  
       - Tools: Git, GitHub, GitLab, Jira, Redmine  

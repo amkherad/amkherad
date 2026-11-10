@@ -1,4 +1,4 @@
-FROM jekyll/jekyll AS builder
+FROM ruby:3.3-bookworm AS builder
 
 USER 0
 
