@@ -24,7 +24,7 @@ Active keys in `_data/data.yml`, in file order: `sidebar`, `career-profile`, `ed
 
 ## Editing `_data/data.yml`
 
-The file is UTF-8 without BOM, CRLF, 346 lines, with two-space indent steps starting at four spaces for top-level children. Keep it that way; a whole-file line-ending or encoding rewrite buries the real change in the diff and can break the build.
+The file is UTF-8 without BOM, LF line endings, 336 lines, with two-space indent steps starting at four spaces for top-level children. Keep it that way; a whole-file line-ending or encoding rewrite buries the real change in the diff and can break the build.
 
 Booleans are unquoted (`about: True`, `education: False`). An empty value (`gitlab:`, `citizenship:`) is meaningful: the theme omits that contact link, so deleting the key is not equivalent to leaving it blank.
 
@@ -56,11 +56,11 @@ Keep `sidebar.pdf` pointing at the artifact the pipeline actually publishes. If 
 
 ## Editing `README.md`
 
-The README is already UTF-8, CRLF, no BOM. Do not convert it, and do not "fix" the `·` separators — they are real U+00B7 characters that some Windows consoles display as `Â·`.
+The README is UTF-8, LF, no BOM. Do not convert it, and do not "fix" the `·` separators — they are real U+00B7 characters that some Windows consoles display as `Â·`.
 
 The structure is a header image, a one-line positioning statement, three badges (resume, blog, email), then About, Tech Stack, GitHub Stats, Connect. Banners and shields are remote images from `capsule-render.vercel.app`, `img.shields.io`, `github-profile-summary-cards.vercel.app` (GitHub stats and top languages) and `streak-stats.demolab.com` (streak). The official `github-readme-stats.vercel.app` instance returned 503 for every user, and the old `github-readme-streak-stats.herokuapp.com` host is unreachable, so a broken stats card is usually an upstream outage, not a malformed URL. Check the URL with `Invoke-WebRequest` before editing the README; a 200 status is not enough, because some hosts return an error SVG with 200.
 
-The tech-stack badges and `skills.toolset` in `data.yml` only partly overlap and already differ. For example, the README lists Vue.js, Cassandra, OpenStack, Datadog, Nginx, Java and C#, none of which are in `skills.toolset`, while `skills.toolset` lists Entity Framework, which the README does not. When a skill is added or removed in one place, decide whether it belongs in the other too, and do not assume they must match.
+The `skills` section was removed from `data.yml` (`RemovedSkillBars`), so the README tech-stack badges are now compared against `career-profile.summary` instead. For example, the README lists Cassandra, OpenStack, Nginx and GitHub Actions, none of which appear in the career profile, while the career profile lists Entity Framework, Dapper, Sequelize, TypeORM, SQLAlchemy and Azure Service Bus, which the README does not. When a skill is added or removed in one place, decide whether it belongs in the other too, and do not assume they must match.
 
 ## Editorial guardrails
 
@@ -70,13 +70,12 @@ Match the existing voice: first person, direct, evidence over adjectives. Long p
 
 Known inconsistencies — surface them, do not silently rewrite:
 
-- `sidebar.name` and the README heading both say `Ali Kherad`, while `_config.yml` has `title: "Ali Kherad"` but `name: Ali Mousavi Kherad`. Confirm which form is preferred before changing any of them.
-- TopTec and MateMachine both still read `May 2022 – Present`, but the user states TopTec began about two years after MateMachine ended, and MateMachine was first Software Architect, then CTO. Get the real start and end dates before changing either time field; do not infer them.
+- Resolved: `sidebar.name`, the README heading, and `_config.yml` (`title`, `name`, `description`) all use `Ali Kherad`.
+- Resolved: TopTec is `May 2024 – Jun 2026 (2 yrs 2 mos)` and MateMachine is `May 2022 – 2024 (2 yrs)`. MateMachine's end is year-only, so its duration cannot be checked. Lifecup `2008 – 2011 (3 yrs)` is also year-only and still needs start and end months.
 - AratelVC (`Sep 2019 – May 2021`) overlaps Daroopin (`Nov 2020 – May 2021`), and Sibe Sabz (`Jun 2014 – Feb 2016`) overlaps Arsin Index (`May 2014 – Jan 2015`). Verify before "fixing" the timeline.
-- Mores software (`May 2021 – Sep 2022`) overlaps TopTec and MateMachine (`May 2022 – Present`) by about four months.
+- Mores Software (`May 2021 – Sep 2022`) overlaps MateMachine (`May 2022 – 2024`) by five months (May–Sep 2022).
 - The Arsin Index details say the software was built "when I was in college (bachelors)", but the BSc is dated `2016 – 2018`, after Arsin ends.
-- `career-profile.summary` says `10+ years of working resume` (probably "experience"), and education says `It's was a small college`; `MateMachine` details says `I persuade them` where "persuaded" is meant.
-- `sidebar.telegram` is `asdf_SHESIB`, which reads like a placeholder rather than a public handle.
+- Resolved: the summary, education, and MateMachine wording were fixed, and `sidebar.telegram` is now `amkherad`.
 - `_config.yml` sets `logo: /assets/img/avatar.jpg`, but that file does not exist; the real avatar is `assets/images/profile.png` (100×100).
 
 ## Tailoring to a job description

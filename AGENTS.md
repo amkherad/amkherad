@@ -9,6 +9,6 @@ Read the matching skill before editing:
 - `.agents/skills/resume-content/SKILL.md` — roles, summary, skills, education, links, README badges, and tailoring to a job description.
 - `.agents/skills/resume-build/SKILL.md` — config, layouts, Sass, the PDF pipeline, local preview, and deploy failures.
 
-Two constraints that are easy to break: keep `_data/data.yml` as UTF-8 without BOM with CRLF line endings, and keep `baseurl` (`/amkherad`), the `sed` prefix in the workflow, the PDF filename, and `sidebar.pdf` consistent with each other.
+Two constraints that are easy to break: keep `_data/data.yml` as UTF-8 without BOM with LF line endings (as committed), and keep `baseurl` (`/amkherad`), the `sed` prefix in the workflow, the PDF filename, and `sidebar.pdf` consistent with each other.
 
 Do not invent experience, dates, or metrics. Flag inconsistencies in the timeline or wording instead of silently correcting them.

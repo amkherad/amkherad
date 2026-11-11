@@ -11,9 +11,9 @@ url: "https://amkherad.ir"
 # disabling since we are using a custom domain
 
 description: >- # used by seo meta and the atom feed
-  Ali Mousavi Kherad's Resume.
+  Ali Kherad's Resume.
 
-name: Ali Mousavi Kherad
+name: Ali Kherad
 repository: amkherad/amkherad.github.io
 logo: /assets/img/avatar.jpg # support internet resources
 #Update all the sections by editing the data.yml file inside _data folder.

@@ -60,7 +60,7 @@ sidebar:
 career-profile:
     title: Career Profile
     summary: |
-      I'm a software engineer with 10+ years of working experience.
+      I'm a software engineer with 10+ years of professional experience.
       I learned to program when I was 15, and it became my greatest passion ever since.
 
       I have profound knowledge of the web and its distributed nature and on the other hand I'm knowledgeable when it comes to low level stuff such as kernel programming, writing compilers (around 20 compilers / interpreters / transpilers), memory management, critical data-sharing, code optimizations.
@@ -68,13 +68,13 @@ career-profile:
       I write clean, testable, and reusable code, and I follow established programming principles and design patterns so others can read it easily.
 
       Technical Skills  
-      - Languages: C#, JavaScript, TypeScript, Python, SQL  
+      - Languages: C#, Java, JavaScript, TypeScript, Python, SQL  
       - Backend: ASP.NET, Express.js, NestJS, FastAPI, Django  
       - Frontend & Mobile: React, React Native, Vue.js  
-      - Databases: PostgreSQL, MSSQL, SQLite, Redis, MongoDB, DynamoDB  
+      - Databases: PostgreSQL, MS SQL Server, SQLite, Redis, MongoDB, DynamoDB  
       - Data Access: Entity Framework, Dapper, Sequelize, TypeORM, SQLAlchemy  
       - Architecture: Microservices, Domain-driven Design, Cell-based Architecture, SOLID, Design Patterns, Clean Architecture  
-      - Communication: REST, GraphQL, gRPC, RabbitMQ, D-Bus  
+      - Communication: REST, GraphQL, gRPC, RabbitMQ, Kafka, Azure Service Bus, D-Bus  
       - Infrastructure: Docker, Kubernetes, CI/CD, AWS, Azure  
 education:
     title: Education
@@ -93,7 +93,7 @@ experiences:
     title: Experiences
     info:
       - role: Software Architect and Tech Lead
-        time: May 2024 – 2026 (2 yr)
+        time: May 2024 – Jun 2026 (2 yrs 2 mos)
         company: TopTec, Iran
         details: |
           TopTec is a ModiranKhodro sister company that builds software for its holding.
@@ -101,13 +101,13 @@ experiences:
             - Built an identity server on OpenIddict with OAuth, OpenID Connect, LDAP and Kerberos sign-in, and federation to external identity providers.
             - Migrated the legacy token structure to encrypted JWTs carrying the claims needed for federation and ABAC.
             - Developed the organization's accounting system, compatible with SAP and other major systems, designed for millions of documents.
-            - Made accounting-document ingestion idempotent with a SHA-256 deduplication key and a unique filtered index in SQL Server.
+            - Made accounting-document ingestion idempotent with a SHA-256 deduplication key and a unique filtered index in MS SQL Server.
             - Built an S3/MinIO object storage service with presigned URLs and Object Lock retention, validating uploads by file signature.
             - Built a message-sender service with a persisted outbox and retries, delivering via in-app streams, SMS and Telegram.
             - Moved large Excel reports to an asynchronous queue and added server-side pagination for general-ledger reports.
             - Coached team members on AI-ready development.
       - role: Software Architect, then CTO
-        time: May 2022 – 2024 (2 yr)
+        time: May 2022 – 2024 (2 yrs)
         company: MateMachine, Vancouver (Hybrid)
         details: |
           MateMachine is an online dating platform. When I joined, the team had a monolithic MVP with significant bugs and performance issues, so I led a gradual move to microservices without a big-bang rewrite.
@@ -120,16 +120,17 @@ experiences:
             - Built a pipeline that publishes project docs to Confluence and a documentation site linking Swagger endpoints.
             - Secured the project with multiple techniques and ran security reviews with external experts and AI.
             - Improved the CI/CD pipelines and SDLC.
-      - role: Back End Developer
+            - Used Datadog for monitoring.
+      - role: Software Architect and Tech Lead
         time: May 2021 – Sep 2022 (1 yr 5 mos)
-        company: Mores software, Tehran
+        company: Mores Software, Tehran
         details: |
-          I was team lead on an SCM system for industry-level supply chains, built as distributed microservices with microfrontends. Stack: ASP.NET, Vue.js, PostgreSQL, DynamoDB, SQS, Kinesis and CloudWatch.
+          I was tech lead on an SCM system for industry-level supply chains, built as distributed microservices with micro-frontends. Stack: ASP.NET, Vue.js, PostgreSQL, DynamoDB, SQS, Kinesis and CloudWatch.
 
             - Taught the team segregation and SOLID principles while maintaining performance.
             - Built an integration testing framework with Testcontainers and Respawn, keeping tests isolated and fast.
             - Designed a cancellation and retry framework for front-end and back-end tasks, with tracking in the UI.
-      - role: Back End Developer
+      - role: Backend Developer
         time: Nov 2020 – May 2021 (7 mos)
         company: Daroopin, Tehran
         details: |
@@ -137,8 +138,8 @@ experiences:
 
             - Built "Shamim Pharmacy", an app for pharmacy owners, and then used its architecture for the main website.
             - Introduced the idea of a unified identity server to identify and track users.
-            - Re-implemented the main website on microservice and event-sourced architectures.
-      - role: Back End Developer
+            - Re-implemented the main website on microservices and event-sourced architectures.
+      - role: Backend Developer
         time: Sep 2019 – May 2021 (1 yr 9 mos)
         company: AratelVC, Tehran
         details: |
@@ -155,7 +156,7 @@ experiences:
         details: |
           A subsidiary of TCI (Telecommunication Company of Iran). Most work was done the old-fashioned way; I kept a modern design for the API layer I owned.
 
-            - An API layer exposing MSSQL stored procedures over HTTP and SOAP, with multi-level and role-based auth, caching and aggregation.
+            - An API layer exposing MS SQL Server stored procedures over HTTP and SOAP, with multi-level and role-based auth, caching and aggregation.
             - An Android app for buying internet packages, paying bills and more.
             - A dynamic reporting system for other applications in the company.
       - role: Full Stack Developer
