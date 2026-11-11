@@ -150,7 +150,7 @@ experiences:
             - A multi-source payment system for Gems, Coins and Avatars.
             - Graceful handling of user disconnection and failures in TCP keep-alive handshakes.
             - Multiple-granularity locking.
-      - role: C#/Java Developer
+      - role: Java and C# Developer
         time: Sep 2016 – Sep 2017 (1 yr 1 mo)
         company: Behineh Pardazesh, Tehran
         details: |

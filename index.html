@@ -12,7 +12,7 @@ layout: default
 <div class="page-break"></div>
 {% include experiences.html %}
 
-<div class="page-break"></div>
+{% if site.data.data.certifications %}<div class="page-break"></div>{% endif %}
 {% include certifications.html %}
 
 {% include projects.html %}
